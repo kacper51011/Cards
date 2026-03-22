@@ -1,8 +1,6 @@
 package main
 
-import "fmt"
-
 func main() {
-	var card string = "Ace of Spades"
-	fmt.Println(card)
+	cards := deck{"myCard1", "myCard2"}
+	cards.print()
 }
