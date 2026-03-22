@@ -1,5 +1,7 @@
 package main
 
+import "strings"
+
 type deck []string
 
 func newDeck() deck {
@@ -20,4 +22,10 @@ func (d deck) print() {
 	for i, c := range d {
 		println("on number ", i, "there is ", c)
 	}
+}
+
+func (d deck) toString() string {
+	sliceString := []string(d)
+	myString := strings.Join(sliceString, ",")
+	return myString
 }
